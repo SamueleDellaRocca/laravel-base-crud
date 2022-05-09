@@ -14,13 +14,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $myComics = Comic::where('id', '>', 0)->paginate(4);
+        $comics = Comic::where('id', '>', 0)->paginate(4);
 
-        $data = [
-            'comics' => $myComics,
-        ];
-
-        return view('index', $data);
+        return view('index', compact('comics'));
     }
 
     /**
