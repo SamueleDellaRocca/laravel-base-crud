@@ -14,7 +14,7 @@
 
     @yield('pageMain')
 
-    @include('partials.header')
+    @include('partials.footer')
     
 </body>
 </html>

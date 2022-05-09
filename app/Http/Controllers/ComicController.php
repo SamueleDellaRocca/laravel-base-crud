@@ -47,8 +47,12 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(comic $comic)
-    {
-        //
+    {   
+        // $comics = Comic::all();
+        return view('show', [
+            'pageTitle' => $comic->title,
+            'comic' => $comic,
+        ]);
     }
 
     /**
