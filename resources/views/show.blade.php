@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="bg-grigio card text-center col-5">
-                <h1>{{ $comic->title }}  </h1>
+                <h1>{{ $comic->title }} </h1>
                 <div class="img">
                     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 </div>
