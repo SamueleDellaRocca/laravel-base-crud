@@ -15,6 +15,11 @@
             </div>
 
             <div class="form-group mb-5">
+                <label for="thumb">URL Immagine</label>
+                <input type="text" class="form-control" name="thumb" id="thumb">
+            </div>
+
+            <div class="form-group mb-5">
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" rows="3" name="description"></textarea>
             </div>

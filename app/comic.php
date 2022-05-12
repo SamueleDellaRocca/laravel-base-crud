@@ -13,6 +13,7 @@ class comic extends Model
         'price',
         'sale_date',
         'type',
+        'thumb',
     ];
 
     public $timestamps = false;

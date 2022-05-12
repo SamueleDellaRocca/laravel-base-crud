@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class UpdateComicsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('comics', function (Blueprint $table) {
+            $table->string('title')->nullable()->change();
+            $table->longText('description')->nullable()->change();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::create('comics', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title');
+            $table->longText('description');
+            $table->longText('thumb');
+            $table->double('price', 8, 2);
+            $table->string('series', 50);
+            $table->date('sale_date');
+            $table->string('type', 50);
+        });
+    }
+}

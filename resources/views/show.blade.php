@@ -10,7 +10,7 @@
             <div class="bg-grigio card text-center col-5">
                 <h1>{{ $comic->title }} </h1>
                 <div class="img">
-                    <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                    <img class="w-100" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 </div>
                 <p>{{ $comic->description }}</p>
                 <div>Prezzo: {{ $comic->price }}</div>
