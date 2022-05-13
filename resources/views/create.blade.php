@@ -46,7 +46,10 @@
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a class="btn btn-info" href="{{ url()->previous() }}">BACK</a>
+            </div>
         </form>
     </div>
 @endsection

@@ -18,7 +18,15 @@
                         <p>{{ $comic->description }}</p>
                         <div>Prezzo: {{ $comic->price }}</div>
                         <div class="text-end">Data di Uscita: {{ $comic->sale_date }}</div>
-
+                        <div class="d-flex justify-content-center gap-2">
+                            <a class="btn btn-success mb-2" href="{{ route('comic.edit', $comic->id) }}">EDIT</a>
+                            <form action="{{ route('comic.destroy', $comic->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger mb-2">DELETE</button>
+                            </form>
+                            <a class="btn btn-info mb-2" href="{{ url()->previous() }}">BACK</a>
+                        </div>
                     </div>
                 @endforeach
             </div>
