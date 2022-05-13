@@ -9,6 +9,16 @@
             @csrf
             @method('PUT')
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <div class="form-group mb-5">
                 <label for="title">Title</label>
                 <input type="text" class="form-control" name="title" id="title" value="{{ $comic->title }}">
@@ -54,6 +64,7 @@
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a class="btn btn-info" href="{{ url()->previous() }}">BACK</a>
+                <a class="btn btn-warning" href="{{ route('comic.index') }}">HOMEPAGE</a>
             </div>
         </form>
     </div>
