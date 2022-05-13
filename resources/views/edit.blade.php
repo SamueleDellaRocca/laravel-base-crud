@@ -9,44 +9,53 @@
             @csrf
             @method('PUT')
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
             <div class="form-group mb-5">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{ $comic->title }}">
+                <input type="text" class="form-control mb-2" name="title" id="title" value="{{ $comic->title }}">
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
                 <label for="thumb">URL Immagine</label>
-                <input type="text" class="form-control" name="thumb" id="thumb" value="{{ $comic->thumb }}">
+                <input type="text" class="form-control mb-2" name="thumb" id="thumb" value="{{ $comic->thumb }}">
+                @error('thumb')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" name="description">{{ $comic->description }}</textarea>
+                <textarea class="form-control mb-2" id="description" rows="3" name="description">{{ $comic->description }}</textarea>
+                @error('description')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
                 <label for="series">Series</label>
-                <input type="text" class="form-control" name="series" id="series" value="{{ $comic->series }}">
+                <input type="text" class="form-control mb-2" name="series" id="series" value="{{ $comic->series }}">
+                @error('series')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
                 <label for="price">Price</label>
-                <input type="number" class="form-control" name="price" id="price" value="{{ $comic->price }}">
+                <input type="number" class="form-control mb-2" name="price" id="price" value="{{ $comic->price }}">
+                @error('price')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
                 <label for="sale_date">Sale_Date</label>
-                <input type="date" class="form-control" name="sale_date" id="sale_date" value="{{ $comic->sale_date }}">
+                <input type="date" class="form-control mb-2" name="sale_date" id="sale_date"
+                    value="{{ $comic->sale_date }}">
+                @error('sale_date')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <?php

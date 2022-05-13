@@ -13,7 +13,10 @@
 
             <div class="form-group mb-5">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}">
+                <input type="text" class="form-control mb-2" name="title" id="title" value="{{ old('title') }}">
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="form-group mb-5">
