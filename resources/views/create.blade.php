@@ -31,7 +31,7 @@
 
             <div class="form-group mb-5">
                 <label for="price">Price</label>
-                <input type="text" class="form-control" name="price" id="price">
+                <input type="number" class="form-control" name="price" id="price">
             </div>
 
             <div class="form-group mb-5">
