@@ -24,6 +24,7 @@
                         <button class="btn btn-danger mb-2">DELETE</button>
                     </form>
                     <a class="btn btn-info mb-2" href="{{ url()->previous() }}">BACK</a>
+                    <a class="btn btn-warning mb-2" href="{{ route('comic.index') }}">HOMEPAGE</a>
 
                 </div>
 

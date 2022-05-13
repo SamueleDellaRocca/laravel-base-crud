@@ -88,7 +88,7 @@ class ComicController extends Controller
     public function update(Request $request, comic $comic)
     {
         $request->validate([
-            'title'=> 'unique:comics|max:255',
+            'title'=> 'max:255',
             'description'=>'',
             'thumb'=>'url',
             'price'=> 'required|max:10',
