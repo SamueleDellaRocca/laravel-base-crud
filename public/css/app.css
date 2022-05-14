@@ -12196,3 +12196,28 @@ fieldset:disabled .btn {
   background-color: green;
 }
 
+.padding_mine {
+  padding: 1.5rem 0rem;
+}
+
+.justify_mine {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  gap: 3rem;
+}
+
+.link_mine {
+  color: black;
+}
+
+.link_mine:hover {
+  color: black;
+}
+

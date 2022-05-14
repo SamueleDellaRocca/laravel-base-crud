@@ -69,8 +69,6 @@
 
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a class="btn btn-info" href="{{ url()->previous() }}">BACK</a>
-                <a class="btn btn-warning" href="{{ route('comic.index') }}">HOMEPAGE</a>
             </div>
         </form>
     </div>

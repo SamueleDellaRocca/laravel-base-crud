@@ -6,11 +6,11 @@
 
 @section('pageMain')
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="bg-grigio card text-center col-5">
                 <h1>{{ $comic->title }} </h1>
                 <div class="img">
-                    <img class="w-75" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                    <img class="w-50" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 </div>
                 <p>{{ $comic->description }}</p>
                 <div>Prezzo: {{ $comic->price }}</div>
@@ -23,8 +23,6 @@
                         @method('DELETE')
                         <button class="btn btn-danger mb-2">DELETE</button>
                     </form>
-                    <a class="btn btn-info mb-2" href="{{ url()->previous() }}">BACK</a>
-                    <a class="btn btn-warning mb-2" href="{{ route('comic.index') }}">HOMEPAGE</a>
 
                 </div>
 
