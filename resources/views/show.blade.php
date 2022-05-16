@@ -19,14 +19,22 @@
                 </a>
                 <div class="d-flex justify-content-center gap-2">
                     <a class="btn btn-success mb-2" href="{{ route('comic.edit', $comic->id) }}">EDIT</a>
-                    <form action="{{ route('comic.destroy', $comic->id) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-danger mb-2">DELETE</button>
-                    </form>
-
+                    <button class="btn btn-danger btn_delete mb-2" data-id="{{ $comic->id }}">DELETE</button>
                 </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="overlay d-none">
+        <div class="confirmation">
+            <h3>Sei sicuro di voler eliminare il comic?</h3>
+            <div class="d-flex justify-content-center gap-2">
+                <button id="btn-no" class="btn btn-success mb-2">NO</button>
+                <form class="form" data-base="{{ route('comic.index') }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger mb-2">ELIMINA</button>
+                </form>
             </div>
 
         </div>
