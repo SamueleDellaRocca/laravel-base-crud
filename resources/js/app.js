@@ -18,8 +18,4 @@ if (overlay) {
         overlay.classList.add('d-none');
     })
 
-    document.querySelector('.overlay').addEventListener('click', function () {
-        form.action = '';
-        overlay.classList.add('d-none');
-    })
 }
